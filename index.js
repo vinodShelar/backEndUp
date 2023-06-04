@@ -6,16 +6,19 @@ const cors = require("cors");
 app.use(cors());
 
 const connectDb = require("./dataBaseConnection/database");
-const router=require("./Route");
+const router = require("./Route");
 
-connectDb();
-
+connectDb()
+  .then(() => {
+    console.log("connected to database successfully");
+  })
+  .catch((error) => console.log(error));
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.use("/up",router);
+app.use("/", router);
 
 app.listen(5000, () => {
   console.log("Server is listening on port 5000");

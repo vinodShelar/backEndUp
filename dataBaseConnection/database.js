@@ -16,15 +16,5 @@ const connectDb = async () => {
   }
 };
 
-async function run() {
-  try {
-    await connectDb();
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    mongoose.connection.close();
-  }
-}
-
-run().catch(console.dir);
 
 module.exports = connectDb;
