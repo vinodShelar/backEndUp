@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-const URI = "mongodb+srv://Vinod:Vinod@123@cluster0.1wsqpoy.mongodb.net/?retryWrites=true&w=majority";
-let uri = "mongodb+srv://Vinod:Vinod%40123@cluster0.1wsqpoy.mongodb.net/users"
+let uri = "mongodb+srv://Vinod:Vinod%40123@cluster0.1wsqpoy.mongodb.net/upForce"
 
 
 const connectDb = async () => {
